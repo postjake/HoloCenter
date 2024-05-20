@@ -1,0 +1,24 @@
+{
+  "name": "my-needle-engine-project",
+  "version": "1.0.0",
+  "type" : "module",
+  "scripts": {
+    "start": "vite --host",
+    "build:dev": "vite build",
+    "build:production": "npm run build:dev && npm run gltf:transform",
+    "gltf:transform": "npm run transform --prefix node_modules/@needle-tools/gltf-build-pipeline"
+  },
+  "dependencies": {
+	  "@needle-tools/engine": "^3.37.12-alpha",
+	  "three": "npm:@needle-tools/three@^0.162.3",
+	  "needle.customusdzbehaviours": "file:./../../../HoloCenter_V3/Library/PackageCache/com.needle.engine-samples@0.16.0/Runtime/USDZCustomBehaviours/Needle.CustomUSDZBehaviours~"
+	},
+  "devDependencies": {
+	  "@needle-tools/helper": "^1.8.0",
+	  "@types/three": "0.162.0",
+	  "@vitejs/plugin-basic-ssl": "^1.0.1",
+	  "typescript": "^5.0.4",
+	  "vite": "<= 4.3.9",
+	  "vite-plugin-compression": "^0.5.1"
+	}
+}

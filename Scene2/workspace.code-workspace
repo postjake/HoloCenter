@@ -1,0 +1,26 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "name": "Needle Engine",
+      "path": "./node_modules/@needle-tools/engine"
+    },
+    {
+      "name": "needle.customusdzbehaviours",
+      "path": "node_modules/needle.customusdzbehaviours",
+      "@needle:managed": true
+    }
+  ],
+  "settings": {
+    "window.title": "Scene2",
+    "files.exclude": {
+      "package-lock.json": true,
+      "**/.git": true,
+      "**/.DS_Store": true,
+      "**/node_modules": true,
+      "**/*.meta": true
+    }
+  }
+}
