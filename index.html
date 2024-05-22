@@ -137,11 +137,11 @@
         var db = indexedDB.open("dummy_indexdb", 1); // iOS 14.6 fix; the call to open indexdb hangs forever otherwise
 
         const buildUrl = "Build";
-        const loaderUrl = buildUrl + "/HoloCenter.loader.js";
+        const loaderUrl = buildUrl + "/bb0d9ecdb05db3e84da20bd14a4f84dc.loader.js";
         const config = {
-            dataUrl: buildUrl + "/HoloCenter.data.gz",
-            frameworkUrl: buildUrl + "/HoloCenter.framework.js.gz",
-            codeUrl: buildUrl + "/HoloCenter.wasm.gz",
+            dataUrl: buildUrl + "/a602c953f0ddd6c40bd1c56f79221afc.data.br",
+            frameworkUrl: buildUrl + "/fc2d37634d758b3944f1a730f82768a5.framework.js.br",
+            codeUrl: buildUrl + "/131887c98f28fedc024f8b75354eee0b.wasm.br",
             streamingAssetsUrl: "StreamingAssets",
             companyName: "Valholo",
             productName: "HoloCenter_V4",
@@ -150,8 +150,8 @@
             cacheControl: function (url) {
             // typically includes: .data, .bundle, .zpt
             if (url.match(/\.data/) || url.match(/\.bundle/) || url.match(/\.zpt/)) {
-             return "must-revalidate";
-            }
+             return "immutable";
+}
    
             if (url.match(/\.mp4/) || url.match(/\.custom/) || url.match(/\.zbin/)) {
                 return "immutable";
