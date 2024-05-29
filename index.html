@@ -27,7 +27,7 @@
             right: 0;
             top: 0;
             bottom: 0;
-            background: #fffa;
+            background: rgba(13, 3, 43, 0.934);
             z-index: 99;
         }
     </style>
@@ -47,9 +47,9 @@
     <!-- <video id="webcam-video" muted autoplay playsinline style="width:100%; height:100%; object-fit:cover; position:absolute"></video> -->
     <canvas id="video-canvas" style="width:100%; height:100%; object-fit:cover; position:absolute"></canvas>
     <div id="startARDiv" class="ctaDiv">
-        <select id="chooseCamSel" style="display: none;" onchange="SelectCam()"></select>
-        <p style="text-align: center; width:60vw;">This AR experience requires access to your device's camera</p>
-        <button id="startARButton" onclick="StartAR()" a href="#" class="button">ALLOW ACCESS</button>
+        <!--<select id="chooseCamSel" style="display: none;" onchange="SelectCam()"></select> -->
+        <p style="text-align: center; width:80vw; color: rgba(156, 95, 248, 0.849);">This AR experience requires access to your device's camera</p>
+        <button id="startARButton" onclick="StartAR()" style="display:box; color:rgb(16, 12, 37)">ALLOW ACCESS</button>
     </div>
     <div id="screenshotDiv" style="display: none;" class="ctaDiv">
         <div style="position:relative; background-color:rgb(255, 255, 255); padding:10px; box-shadow: 0 4px 8px 0 rgba(106, 34, 213, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);">
@@ -67,7 +67,7 @@
         </div>
     </div>
     <div id="errorDiv" class="ctaDiv" style="display: none; background:#aaa">
-        <p id="errorText" style="text-align: center; width:60vw; color:white"></p>
+        <p id="errorText" style="text-align: center; width:60vw; color:rgb(185, 139, 139)"></p>
     </div>
     <div id="unity-container" class="unity-mobile">
         <canvas id="unity-canvas" style="width: 100%; height: 100%; background: #0000; z-index: -99"></canvas>
