@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content='width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=yes'>
-    <title>Unity WebGL Player | HoloCenter_V3.0</title>
+    <title>Unity WebGL Player | HoloCenter AR 3.0</title>
     <link rel="stylesheet" href="TemplateData/style.css">
     <style>
         html{
@@ -27,7 +27,7 @@
             right: 0;
             top: 0;
             bottom: 0;
-            background: #fffa;
+            background: rgba(13, 3, 43, 0.934);
             z-index: 99;
         }
     </style>
@@ -42,12 +42,12 @@
     <!-- <video id="webcam-video" muted autoplay playsinline style="width:100%; height:100%; object-fit:cover; position:absolute"></video> -->
     <canvas id="video-canvas" style="width:100%; height:100%; object-fit:cover; position:absolute"></canvas>
     <div id="startARDiv" class="ctaDiv">
-        <select id="chooseCamSel" style="display: none;" onchange="SelectCam()"></select>
-        <p style="text-align: center; width:60vw;">This augmented reality experience requires access to your device's camera</p>
-        <button id="startARButton" onclick="StartAR()" style="display:none">ALLOW ACCESS</button>
+        <!--<select id="chooseCamSel" style="display: none;" onchange="SelectCam()"></select> -->
+        <p style="text-align: center; width:80vw; font-size:120%;color: rgb(165, 64, 232)">Created for the HoloCenter by,<br><br><strong>Jake Adams</strong>//@valholo <br>---<br> <strong>Jon McCarthy</strong>//@dudemanbrosun<br><br>This AR experience requires access to your device's camera.</p><br>
+        <button id="startARButton" onclick="StartAR()" style= "background-color:plum;border-color:hotpink;display:box;color:rgb(43,17,173)"><strong>ALLOW ACCESS</strong></button>
     </div>
     <div id="screenshotDiv" style="display: none;" class="ctaDiv">
-        <div style="position:relative; background-color:white; padding:10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);">
+        <div style="position:relative; background-color:rgb(255, 255, 255); padding:10px; box-shadow: 0 4px 8px 0 rgba(106, 34, 213, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);">
             <img id="screenshotImg" src="" alt="screenshot" style="width:80vw; height:80vh">
             <button onclick="document.getElementById('screenshotDiv').style.display = 'none';" style="position:absolute; transform:translateY(-100%); right:0; top:0">Close</button>
         </div>
@@ -62,7 +62,7 @@
         </div>
     </div>
     <div id="errorDiv" class="ctaDiv" style="display: none; background:#aaa">
-        <p id="errorText" style="text-align: center; width:60vw; color:white"></p>
+        <p id="errorText" style="text-align: center; width:60vw; color:rgb(185, 139, 139)"></p>
     </div>
     <div id="unity-container" class="unity-mobile">
         <canvas id="unity-canvas" style="width: 100%; height: 100%; background: #0000; z-index: -99"></canvas>
@@ -111,8 +111,8 @@
                     frameworkUrl: "Build/HoloCenter.framework.js",
                     codeUrl: "Build/HoloCenter.wasm",
                     streamingAssetsUrl: "StreamingAssets",
-                    companyName: "DefaultCompany",
-                    productName: "HoloCenter_V3.0",
+                    companyName: "Valholo",
+                    productName: "HoloCenter AR 3.0",
                     productVersion: "1.0.0",
                     //webglContextAttributes: { "preserveDrawingBuffer": true },
                     // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
@@ -156,7 +156,7 @@
                 while (window.requestingForPermissions) {
                     // Wait until requestingForPermissions becomes true.
                     console.log("Waiting for permissions...");
-                    await new Promise(resolve => setTimeout(resolve, 100)); // Adjust the delay time as needed.
+                    await new Promise(resolve => setTimeout(resolve, 150)); // Adjust the delay time as needed.
                 }
                 console.log("Got Permissions");
                 if(window.webcamStream)
